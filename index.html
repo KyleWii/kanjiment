@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="kanjidata.js"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kanjiment</title>
+  <style>
+    :root {
+      --bg: #040404;
+      --panel: #101010;
+      --panel-2: #1a1a1a;
+      --text: #eeeeee;
+      --muted: #999999;
+      --line: #2a2a2a;
+      --good: #84cc16;
+      --bad: #ef4444;
+      --accent: #bf52ff;
+      --button: #222222;
+      --button-hover: #303030;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+    }
+
+    .app {
+      width: min(1050px, 100%);
+      padding: 20px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 14px;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1.45rem;
+      letter-spacing: 0.04em;
+    }
+
+    .top-actions {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    button {
+      background: var(--button);
+      color: var(--text);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-size: 0.95rem;
+      cursor: pointer;
+    }
+
+    button:hover { background: var(--button-hover); }
+    button:disabled {
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 270px 1fr;
+      gap: 16px;
+    }
+
+    .sidebar, .main-card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 16px;
+    }
+
+    .stage-card {
+      background: var(--panel-2);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 12px;
+      margin-bottom: 10px;
+    }
+
+    .stage-card h2 {
+      margin: 0 0 8px;
+      font-size: 1rem;
+    }
+
+    .small {
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
+    .stats {
+      display: grid;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .stat-row {
+      display: flex;
+      justify-content: space-between;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .stat-row strong { color: var(--text); }
+
+    .review-area {
+      min-height: 430px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      gap: 18px;
+    }
+
+    .kanji-big {
+      font-size: clamp(5rem, 16vw, 10rem);
+      line-height: 1;
+      font-weight: 500;
+    }
+
+    .vocab-word {
+      font-size: clamp(2.3rem, 8vw, 5rem);
+      line-height: 1.1;
+    }
+
+    .vocab-word b {
+      color: var(--accent);
+      font-weight: 800;
+    }
+
+    .prompt {
+      color: var(--muted);
+      font-size: 1rem;
+      max-width: 600px;
+    }
+
+    .choices {
+      width: min(520px, 100%);
+      display: grid;
+      gap: 10px;
+    }
+
+    .choice {
+      width: 100%;
+      text-align: center;
+      font-size: 1rem;
+      padding: 13px 16px;
+    }
+
+    .reading-form {
+      display: flex;
+      gap: 8px;
+      width: min(520px, 100%);
+    }
+
+    input {
+      flex: 1;
+      min-width: 0;
+      background: #090909;
+      color: var(--text);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 12px 14px;
+      font-size: 1rem;
+    }
+
+    .message {
+      min-height: 24px;
+      font-size: 0.98rem;
+    }
+
+    .message.good { color: var(--good); }
+    .message.bad { color: var(--bad); }
+
+    .next-box {
+      background: var(--panel-2);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px;
+      width: min(560px, 100%);
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 8px;
+      background: #090909;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      overflow: hidden;
+      margin-top: 8px;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: var(--accent);
+      width: 0%;
+      transition: width 0.2s ease;
+    }
+
+    .footer-note {
+      color: var(--muted);
+      font-size: 0.82rem;
+      margin-top: 14px;
+      line-height: 1.4;
+    }
+
+    @media (max-width: 800px) {
+      .grid { grid-template-columns: 1fr; }
+      header { align-items: flex-start; gap: 12px; flex-direction: column; }
+      .top-actions { width: 100%; }
+      .top-actions button { flex: 1; }
+      .reading-form { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div>
+        <h1>Kanjiment</h1>
+        <div class="small">Kanji learning tool</div>
+      </div>
+      <div class="top-actions">
+        <button id="studyBtn">Study</button>
+        <button id="resetBtn">Reset progress</button>
+      </div>
+    </header>
+
+    <div class="grid">
+      <aside class="sidebar">
+        <div class="stage-card">
+          <h2>Stage 1 - Meaning</h2>
+          <div class="small">Pick the correct meaning of a kanji between 3 choices.</div>
+        </div>
+        <div class="stage-card">
+          <h2>Stage 2 - Reading</h2>
+          <div class="small">Type the reading in Hiragana of the word.</div>
+        </div>
+        <div class="stage-card">
+          <h2>Stage 3 - Reviewing</h2>
+          <div class="small">Reviewing using spaced repetition. This is also where you unlock new kanji to learn.</div>
+        </div>
+
+        <div class="stats">
+          <div class="stat-row"><span>Active kanji</span><strong id="activeCount">0</strong></div>
+          <div class="stat-row"><span>Stage 1</span><strong id="stage1Count">0</strong></div>
+          <div class="stat-row"><span>Stage 2</span><strong id="stage2Count">0</strong></div>
+          <div class="stat-row"><span>Stage 3</span><strong id="stage3Count">0</strong></div>
+          <div class="stat-row"><span>Locked</span><strong id="lockedCount">0</strong></div>
+        </div>
+
+      </aside>
+
+      <main class="main-card">
+        <section id="reviewArea" class="review-area"></section>
+      </main>
+    </div>
+
+    <div class="footer-note">
+      Kanjiment will always be free. Everything is stored inside your computer, there are no servers necessary.
+    </div>
+  </div>
+
+  <script>
+    const STORAGE_KEY = "kanjiment.save.v1";
+
+    const STAGE_ONE_TWO_INTERVALS = [
+      60 * 1000,
+      3 * 60 * 1000,
+      90 * 60 * 1000
+    ];
+
+    const STAGE_THREE_INTERVALS = [
+      60 * 1000,
+      3 * 60 * 1000,
+      90 * 60 * 1000,
+      8 * 60 * 60 * 1000,
+      24 * 60 * 60 * 1000,
+      2 * 24 * 60 * 60 * 1000,
+      7 * 24 * 60 * 60 * 1000,
+      14 * 24 * 60 * 60 * 1000,
+      30 * 24 * 60 * 60 * 1000,
+      90 * 24 * 60 * 60 * 1000,
+      180 * 24 * 60 * 60 * 1000,
+      365 * 24 * 60 * 60 * 1000,
+      730 * 24 * 60 * 60 * 1000,
+      1825 * 24 * 60 * 60 * 1000,
+      3650 * 24 * 60 * 60 * 1000
+    ];
+
+    const reviewArea = document.getElementById("reviewArea");
+    const studyBtn = document.getElementById("studyBtn");
+    const resetBtn = document.getElementById("resetBtn");
+
+    let state = loadState();
+    let activeCard = null;
+    let timer = null;
+
+    function now() {
+      return Date.now();
+    }
+
+    function makeDefaultState() {
+      return {
+        createdAt: now(),
+        lastUnlockedDay: null,
+        items: KANJI_BANK.map((entry, index) => ({
+          id: entry.id,
+          unlocked: index < 3,
+          stage: index < 3 ? 1 : 0,
+          step: 0,
+          dueAt: index < 3 ? now() : null,
+          correctTotal: 0,
+          incorrectTotal: 0,
+          vocabIndex: 0
+        }))
+      };
+    }
+
+    function loadState() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return makeDefaultState();
+        const parsed = JSON.parse(raw);
+
+        // Repair save if the bank changed.
+        for (const entry of KANJI_BANK) {
+          if (!parsed.items.some(item => item.id === entry.id)) {
+            parsed.items.push({
+              id: entry.id,
+              unlocked: false,
+              stage: 0,
+              step: 0,
+              dueAt: null,
+              correctTotal: 0,
+              incorrectTotal: 0,
+              vocabIndex: 0
+            });
+          }
+        }
+
+        for (const item of parsed.items) {
+          if (typeof item.vocabIndex !== "number") item.vocabIndex = 0;
+        }
+
+        return parsed;
+      } catch {
+        return makeDefaultState();
+      }
+    }
+
+    function saveState() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    }
+
+    function dayNumber(ms) {
+      return Math.floor(ms / (24 * 60 * 60 * 1000));
+    }
+
+    function getData(id) {
+      return KANJI_BANK.find(entry => entry.id === id);
+    }
+
+    function getItem(id) {
+      return state.items.find(item => item.id === id);
+    }
+
+    function normalizeReading(text) {
+      return text.trim().replace(/\s+/g, "");
+    }
+
+    function shuffle(array) {
+      const copy = [...array];
+      for (let i = copy.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [copy[i], copy[j]] = [copy[j], copy[i]];
+      }
+      return copy;
+    }
+
+    function canUnlockMoreKanji() {
+      const locked = state.items.filter(item => !item.unlocked);
+      const unlocked = state.items.filter(item => item.unlocked);
+      if (locked.length === 0) return false;
+      if (unlocked.length === 0) return true;
+      return unlocked.every(item => item.stage >= 3);
+    }
+
+    function unlockNextBatch() {
+      if (!canUnlockMoreKanji()) return;
+      const toUnlock = state.items.filter(item => !item.unlocked).slice(0, 3);
+      for (const item of toUnlock) {
+        item.unlocked = true;
+        item.stage = 1;
+        item.step = 0;
+        item.dueAt = now();
+      }
+      state.lastUnlockedDay = dayNumber(now());
+      saveState();
+      startStudy();
+    }
+
+    function getDueItems() {
+      return state.items
+        .filter(item => item.unlocked && item.dueAt !== null && item.dueAt <= now())
+        .sort((a, b) => a.dueAt - b.dueAt);
+    }
+
+    function getNextDueItem() {
+      return state.items
+        .filter(item => item.unlocked && item.dueAt !== null)
+        .sort((a, b) => a.dueAt - b.dueAt)[0] || null;
+    }
+
+    function updateStats() {
+      const active = state.items.filter(item => item.unlocked);
+      document.getElementById("activeCount").textContent = active.length;
+      document.getElementById("stage1Count").textContent = active.filter(item => item.stage === 1).length;
+      document.getElementById("stage2Count").textContent = active.filter(item => item.stage === 2).length;
+      document.getElementById("stage3Count").textContent = active.filter(item => item.stage === 3).length;
+      document.getElementById("lockedCount").textContent = state.items.filter(item => !item.unlocked).length;
+    }
+
+function formatDuration(ms) {
+  const minutes = Math.ceil(ms / 60000);
+
+  if (minutes <= 0) return "now";
+
+  // Keep 90 minutes as 90m instead of rounding to 2h
+  if (minutes < 120) return `${minutes}m`;
+
+  const hours = Math.floor(minutes / 60);
+
+  if (hours < 48) return `${hours}h`;
+
+  const days = Math.floor(hours / 24);
+  return `${days}d`;
+}
+
+    function renderIdle() {
+      clearInterval(timer);
+      timer = null;
+      activeCard = null;
+      updateStats();
+
+      if (canUnlockMoreKanji()) {
+        reviewArea.innerHTML = `
+          <div class="next-box">
+            <h2>Ready for more?</h2>
+            <p class="small">All kanji has reached stage 3. You can add the next 3 kanji now, or keep reviewing the current ones. It is recommended you stop now unless you didn't learn any kanji today.</p>
+            <div style="display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin-top:12px;">
+              <button id="unlockMoreBtn">Learn 3 more kanji</button>
+              <button id="reviewCurrentBtn">Review current kanji</button>
+            </div>
+          </div>
+        `;
+        document.getElementById("unlockMoreBtn").addEventListener("click", unlockNextBatch);
+        document.getElementById("reviewCurrentBtn").addEventListener("click", () => {
+          const due = getDueItems();
+          if (due.length > 0) {
+            activeCard = due[0];
+            if (activeCard.stage === 1) renderMeaningCard(activeCard);
+            else renderReadingCard(activeCard);
+          } else {
+            renderNextDueOnly();
+          }
+        });
+        return;
+      }
+
+      renderNextDueOnly();
+    }
+
+    function renderNextDueOnly() {
+      const next = getNextDueItem();
+      if (!next) {
+        reviewArea.innerHTML = `
+          <div class="next-box">
+            <h2>Finished</h2>
+            <p class="small">Congrats, you unlocked all the kanji. Currently, it is in beta so there won't be all of the kanji.</p>
+          </div>
+        `;
+        return;
+      }
+
+      const data = getData(next.id);
+      reviewArea.innerHTML = `
+        <div class="next-box">
+          <h2>No reviews due</h2>
+          <p class="small">Next review is due in <strong id="countdown">${formatDuration(next.dueAt - now())}</strong>.</p>
+          <div class="progress-bar"><div id="progressFill" class="progress-fill"></div></div>
+        </div>
+        <p class="small">The next kanji is hidden until it is due.</p>
+      `;
+
+      timer = setInterval(() => {
+        const remaining = next.dueAt - now();
+        const countdown = document.getElementById("countdown");
+        const progressFill = document.getElementById("progressFill");
+        if (countdown) countdown.textContent = formatDuration(remaining);
+        if (progressFill) {
+          const width = remaining <= 0 ? 100 : Math.max(0, 100 - Math.min(100, remaining / (60 * 1000) * 100));
+          progressFill.style.width = `${width}%`;
+        }
+        if (remaining <= 0) startStudy();
+      }, 1000);
+    }
+
+    function startStudy() {
+      clearInterval(timer);
+      timer = null;
+      if (canUnlockMoreKanji()) {
+        renderIdle();
+        return;
+      }
+      const due = getDueItems();
+      if (due.length === 0) {
+        renderIdle();
+        return;
+      }
+      activeCard = due[0];
+      if (activeCard.stage === 1) renderMeaningCard(activeCard);
+      else renderReadingCard(activeCard);
+    }
+
+    function renderMeaningCard(item) {
+      const data = getData(item.id);
+      const wrongChoices = shuffle(KANJI_BANK.filter(entry => entry.id !== item.id)).slice(0, 2).map(entry => entry.meaning);
+      const choices = shuffle([data.meaning, ...wrongChoices]);
+
+      reviewArea.innerHTML = `
+        <div class="prompt">Stage 1 - Meaning</div>
+        <div class="kanji-big">${data.kanji}</div>
+        <div class="prompt">Choose the correct meaning.</div>
+        <div class="choices">
+          ${choices.map(choice => `<button class="choice" data-choice="${choice}">${choice}</button>`).join("")}
+        </div>
+        <div id="message" class="message"></div>
+      `;
+
+      for (const button of document.querySelectorAll(".choice")) {
+        button.addEventListener("click", () => answerMeaning(item, button.dataset.choice));
+      }
+    }
+
+    function getCurrentVocab(item) {
+      const data = getData(item.id);
+      return data.vocab[(item.vocabIndex || 0) % data.vocab.length];
+    }
+
+    function renderReadingCard(item) {
+      const data = getData(item.id);
+      const vocab = getCurrentVocab(item);
+      const vocabHtml = vocab.word.replace(data.kanji, `<b>${data.kanji}</b>`);
+
+      reviewArea.innerHTML = `
+        <div class="prompt">${item.stage === 2 ? "Stage 2 - Reading" : "Stage 3 - Reviewing"}</div>
+        <div class="prompt" style="font-size:1.25rem; color:var(--text);">${vocab.meaning}</div>
+        <div class="vocab-word">${vocabHtml}</div>
+        <div class="prompt">Type the full reading in hiragana.</div>
+        <form id="readingForm" class="reading-form">
+          <input id="readingInput" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="ひらがな" />
+          <button type="submit">Check</button>
+        </form>
+        <div id="message" class="message"></div>
+      `;
+
+      document.getElementById("readingInput").focus();
+      document.getElementById("readingForm").addEventListener("submit", event => {
+        event.preventDefault();
+        answerReading(item, document.getElementById("readingInput").value);
+      });
+    }
+
+    function answerMeaning(item, choice) {
+      const data = getData(item.id);
+      const message = document.getElementById("message");
+      if (choice === data.meaning) {
+        item.correctTotal++;
+        advanceItem(item);
+        saveState();
+        message.className = "message good";
+        message.textContent = "Correct.";
+        setTimeout(startStudy, 450);
+      } else {
+        item.incorrectTotal++;
+        item.step = 0;
+        item.dueAt = now();
+        saveState();
+        message.className = "message bad";
+        message.textContent = "Incorrect. This item starts Stage 1 over.";
+        setTimeout(() => renderMeaningCard(item), 800);
+      }
+      updateStats();
+    }
+
+    function boldKanjiReading(fullReading, kanjiReading) {
+      const safeFull = fullReading;
+      const index = safeFull.indexOf(kanjiReading);
+      if (index === -1) return safeFull;
+      return safeFull.slice(0, index) + "<b>" + kanjiReading + "</b>" + safeFull.slice(index + kanjiReading.length);
+    }
+
+    function answerReading(item, typed) {
+      const data = getData(item.id);
+      const vocab = getCurrentVocab(item);
+      const answer = normalizeReading(typed);
+      const correct = normalizeReading(vocab.reading);
+      const message = document.getElementById("message");
+
+      if (answer === correct) {
+        item.correctTotal++;
+        message.className = "message good";
+        message.innerHTML = `Correct. ${vocab.word} means “${vocab.meaning}”. Reading: ${boldKanjiReading(vocab.reading, vocab.kanjiReading)}.`;
+        item.vocabIndex = ((item.vocabIndex || 0) + 1) % data.vocab.length;
+        advanceItem(item);
+        saveState();
+        setTimeout(startStudy, 1500);
+      } else {
+        item.incorrectTotal++;
+        item.step = 0;
+        item.dueAt = now();
+        saveState();
+        message.className = "message bad";
+        message.innerHTML = `Incorrect. Correct reading: ${boldKanjiReading(vocab.reading, vocab.kanjiReading)}. This item starts over in its current stage.`;
+        setTimeout(() => renderReadingCard(item), 1300);
+      }
+      updateStats();
+    }
+
+    function advanceItem(item) {
+  if (item.stage === 1) {
+    if (item.step < STAGE_ONE_TWO_INTERVALS.length) {
+      item.dueAt = now() + STAGE_ONE_TWO_INTERVALS[item.step];
+      item.step++;
+    } else {
+      item.stage = 2;
+      item.step = 0;
+      item.dueAt = now();
+    }
+    return;
+  }
+
+  if (item.stage === 2) {
+    if (item.step < STAGE_ONE_TWO_INTERVALS.length) {
+      item.dueAt = now() + STAGE_ONE_TWO_INTERVALS[item.step];
+      item.step++;
+    } else {
+      item.stage = 3;
+      item.step = 0;
+      item.dueAt = now();
+    }
+    return;
+  }
+
+  if (item.stage === 3) {
+    const interval = STAGE_THREE_INTERVALS[Math.min(item.step, STAGE_THREE_INTERVALS.length - 1)];
+    item.dueAt = now() + interval;
+    item.step = Math.min(item.step + 1, STAGE_THREE_INTERVALS.length - 1);
+  }
+}
+
+    studyBtn.addEventListener("click", startStudy);
+
+    resetBtn.addEventListener("click", () => {
+      const confirmed = confirm("Are you sure you want to reset all Kanjiment progress?");
+      if (!confirmed) return;
+      state = makeDefaultState();
+      saveState();
+      renderIdle();
+    });
+
+    renderIdle();
+  </script>
+</body>
+</html>
