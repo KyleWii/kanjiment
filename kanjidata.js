@@ -645,5 +645,125 @@ const KANJI_BANK = [
         { word: "数学", meaning: "mathematics", reading: "すうがく", kanjiReading: "すう" },
         { word: "数字", meaning: "numeral", reading: "すうじ", kanjiReading: "すう" }
     ]
+},
+{
+    id: "82", kanji: "多", meaning: "many, frequent, much",
+    vocab: [
+        { word: "多い", meaning: "many", reading: "おおい", kanjiReading: "おお" },
+        { word: "多分", meaning: "maybe", reading: "たぶん", kanjiReading: "た" },
+        { word: "多忙", meaning: "busy", reading: "たぼう", kanjiReading: "た" }
+    ]
+},
+{
+    id: "83", kanji: "少", meaning: "few, little",
+    vocab: [
+        { word: "少し", meaning: "a little", reading: "すこし", kanjiReading: "すこ" },
+        { word: "少女", meaning: "girl", reading: "しょうじょ", kanjiReading: "しょう" },
+        { word: "少年", meaning: "boy", reading: "しょうねん", kanjiReading: "しょう" }
+    ]
+},
+{
+    id: "84", kanji: "万", meaning: "ten thousand, 10,000",
+    vocab: [
+        { word: "十万", meaning: "one hundred thousand", reading: "じゅうまん", kanjiReading: "まん" },
+        { word: "一万", meaning: "ten thousand", reading: "いちまん", kanjiReading: "まん" },
+        { word: "百万", meaning: "million", reading: "ひゃくまん", kanjiReading: "まん" }
+    ]
+},
+{
+    id: "85", kanji: "半", meaning: "half, middle, semi-",
+    vocab: [
+        { word: "半分", meaning: "half", reading: "はんぶん", kanjiReading: "はん" },
+        { word: "二時半", meaning: "two thirty", reading: "にじはんん", kanjiReading: "はん" },
+        { word: "半額", meaning: "half price", reading: "はんがく", kanjiReading: "はん" }
+    ]
+},
+{
+    id: "86", kanji: "形", meaning: "shape, form, style",
+    vocab: [
+        { word: "形", meaning: "shape", reading: "かたち", kanjiReading: "かたち" },
+        { word: "人形", meaning: "doll", reading: "にんぎょう", kanjiReading: "ぎょう" },
+        { word: "活用形", meaning: "conjugated form", reading: "かつようけい", kanjiReading: "けい" }
+    ]
+},
+{
+    id: "87", kanji: "太", meaning: "plump, thick, big around",
+    vocab: [
+        { word: "太い", meaning: "fat", reading: "ふとい", kanjiReading: "ふと" },
+        { word: "太陽", meaning: "sun", reading: "たいよう", kanjiReading: "たい" },
+        { word: "太鼓", meaning: "drum", reading: "たいこ", kanjiReading: "たい" }
+    ]
+},
+{
+    id: "88", kanji: "細", meaning: "dainty, get thin, taper",
+    vocab: [
+        { word: "詳細", meaning: "details", reading: "しょうさい", kanjiReading: "さい" },
+        { word: "細い", meaning: "thin", reading: "ほそい", kanjiReading: "ほそ" },
+        { word: "細かい", meaning: "detailed", reading: "こまかい", kanjiReading: "こま" }
+    ]
+},
+{
+    id: "89", kanji: "広", meaning: "wide, broad, spacious",
+    vocab: [
+        { word: "広い", meaning: "wide", reading: "ひろい", kanjiReading: "ひろ" },
+        { word: "広げる", meaning: "to spread something", reading: "ひろげる", kanjiReading: "ひろ" },
+        { word: "広告", meaning: "advertisement", reading: "こうこく", kanjiReading: "こう" }
+    ]
+},
+{
+    id: "90", kanji: "長", meaning: "long, leader, superior",
+    vocab: [
+        { word: "長い", meaning: "long", reading: "ながい", kanjiReading: "なが" },
+        { word: "社長", meaning: "company president", reading: "しゃちょう", kanjiReading: "ちょう" },
+        { word: "長靴", meaning: "rain boots", reading: "ながぐつ", kanjiReading: "なが" }
+    ]
+},
+{
+    id: "91", kanji: "点", meaning: "spot, point, mark",
+    vocab: [
+        { word: "点", meaning: "point", reading: "てん", kanjiReading: "てん" },
+        { word: "欠点", meaning: "shortcoming", reading: "けってん", kanjiReading: "てん" },
+        { word: "点ける", meaning: "to turn something on", reading: "つける", kanjiReading: "つ" }
+    ]
+},
+{
+    id: "92", kanji: "丸", meaning: "round, full (month), perfection",
+    vocab: [
+        { word: "丸", meaning: "circle", reading: "まる", kanjiReading: "まる" },
+        { word: "丸い", meaning: "circular", reading: "まるい", kanjiReading: "まる" },
+        { word: "弾丸", meaning: "bullet", reading: "だんがん", kanjiReading: "がん" }
+    ]
+},
+{
+    id: "93", kanji: "交", meaning: "mingle, mixing, association",
+    vocab: [
+        { word: "交ぜる", meaning: "to mix something", reading: "まぜる", kanjiReading: "ま" },
+        { word: "外交", meaning: "diplomacy", reading: "がいこう", kanjiReading: "こう" },
+        { word: "交通", meaning: "traffic", reading: "こうつう", kanjiReading: "こう" }
+    ]
+},
+{
+    id: "94", kanji: "光", meaning: "ray, light",
+    vocab: [
+        { word: "光", meaning: "light", reading: "ひかり", kanjiReading: "ひかり" },
+        { word: "にっこう", meaning: "sunlight", reading: "にっこう", kanjiReading: "こう" },
+        { word: "光る", meaning: "to shine", reading: "ひかる", kanjiReading: "ひか" }
+    ]
+},
+{
+    id: "95", kanji: "角", meaning: "angle, corner, square",
+    vocab: [
+        { word: "角", meaning: "corner", reading: "かど", kanjiReading: "かど" },
+        { word: "四角", meaning: "square", reading: "しかく", kanjiReading: "かく" },
+        { word: "三角", meaning: "triangle", reading: "さんかく", kanjiReading: "かっく" }
+    ]
+},
+{
+    id: "96", kanji: "計", meaning: "plot, plan, scheme",
+    vocab: [
+        { word: "計算", meaning: "calculation", reading: "けいさん", kanjiReading: "けい" },
+        { word: "計画", meaning: "plan", reading: "けいかく", kanjiReading: "けい" },
+        { word: "合計", meaning: "total", reading: "ごうけい", kanjiReading: "けい" }
+    ]
 }
 ];
