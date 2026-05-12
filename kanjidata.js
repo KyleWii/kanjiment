@@ -765,5 +765,101 @@ const KANJI_BANK = [
         { word: "計画", meaning: "plan", reading: "けいかく", kanjiReading: "けい" },
         { word: "合計", meaning: "total", reading: "ごうけい", kanjiReading: "けい" }
     ]
+},
+{
+    id: "97", kanji: "直", meaning: "straightaway, honesty, frankness",
+    vocab: [
+        { word: "直進", meaning: "going straight ahead", reading: "ちょくしん", kanjiReading: "ちょく" },
+        { word: "正直", meaning: "honest", reading: "しょうじき", kanjiReading: "じき" },
+        { word: "直す", meaning: "to fix", reading: "なおす", kanjiReading: "なお" }
+    ]
+},
+{
+    id: "98", kanji: "線", meaning: "line, track",
+    vocab: [
+        { word: "曲線", meaning: "curve", reading: "きょくせん", kanjiReading: "せん" },
+        { word: "線路", meaning: "railroad track", reading: "せんろ", kanjiReading: "せん" },
+        { word: "新幹線", meaning: "bullet train", reading: "しんかんせん", kanjiReading: "せん" }
+    ]
+},
+{
+    id: "99", kanji: "矢", meaning: "dart, arrow",
+    vocab: [
+        { word: "矢", meaning: "arrow", reading: "や", kanjiReading: "や" },
+        { word: "弓矢", meaning: "bow and arrow", reading: "ゆみや", kanjiReading: "や" },
+        { word: "矢印", meaning: "arrow", reading: "やじるし", kanjiReading: "や" }
+    ]
+},
+{
+    id: "100", kanji: "弱", meaning: "weak, frail",
+    vocab: [
+        { word: "弱い", meaning: "weak", reading: "よわい", kanjiReading: "よわ" },
+        { word: "弱点", meaning: "weak point", reading: "じゃくてん", kanjiReading: "じゃく" },
+        { word: "弱虫", meaning: "weakling", reading: "よわむし", kanjiReading: "よわ" }
+    ]
+},
+{
+    id: "101", kanji: "強", meaning: "strong",
+    vocab: [
+        { word: "強い", meaning: "strong", reading: "つよい", kanjiReading: "つよ" },
+        { word: "協力", meaning: "strong", reading: "きょうりょく", kanjiReading: "きょう" },
+        { word: "強調", meaning: "emphasis", reading: "きょうちょう", kanjiReading: "きょう" }
+    ]
+},
+{
+    id: "102", kanji: "高", meaning: "tall, high, expensive",
+    vocab: [
+        { word: "高い", meaning: "tall", reading: "たかい", kanjiReading: "たか" },
+        { word: "高校", meaning: "high school", reading: "こうこう", kanjiReading: "こう" },
+        { word: "高度", meaning: "altitude", reading: "こうど", kanjiReading: "こう" }
+    ]
+},
+{
+    id: "103", kanji: "同", meaning: "same, agree, equal",
+    vocab: [
+        { word: "同じ", meaning: "same", reading: "おなじ", kanjiReading: "おな" },
+        { word: "同日", meaning: "same day", reading: "どうじつ", kanjiReading: "どう" },
+        { word: "同時", meaning: "same time", reading: "どうじ", kanjiReading: "どう" }
+    ]
+},
+{
+    id: "194", kanji: "親", meaning: "parent, intimacy, relative",
+    vocab: [
+        { word: "親しい", meaning: "intimate", reading: "したしい", kanjiReading: "した" },
+        { word: "親友", meaning: "close friend", reading: "しんゆう", kanjiReading: "しん" },
+        { word: "親切", meaning: "kind", reading: "しんせつ", kanjiReading: "しん" }
+    ]
+},
+{
+    id: "195", kanji: "母", meaning: "mother",
+    vocab: [
+        { word: "母", meaning: "mother", reading: "はは", kanjiReading: "はは" },
+        { word: "お母さん", meaning: "mother", reading: "おかあさん", kanjiReading: "かあ" },
+        { word: "祖母", meaning: "grandmother", reading: "そぼ", kanjiReading: "ぼ" }
+    ]
+},
+{
+    id: "106", kanji: "父", meaning: "father",
+    vocab: [
+        { word: "父", meaning: "father", reading: "ちち", kanjiReading: "ちち" },
+        { word: "お父さん", meaning: "father", reading: "おとうさん", kanjiReading: "とう" },
+        { word: "祖父", meaning: "grandfather", reading: "そふ", kanjiReading: "ふ" }
+    ]
+},
+{
+    id: "107", kanji: "姉", meaning: "elder sister",
+    vocab: [
+        { word: "姉", meaning: "older sister", reading: "あね", kanjiReading: "あね" },
+        { word: "お姉さん", meaning: "older sister", reading: "おねえさん", kanjiReading: "ねえ" },
+        { word: "姉妹", meaning: "sisters", reading: "しまい", kanjiReading: "しまい" }
+    ]
+},
+{
+    id: "108", kanji: "兄", meaning: "elder brother, big brother",
+    vocab: [
+        { word: "兄", meaning: "older brother", reading: "あに", kanjiReading: "あに" },
+        { word: "お兄さん", meaning: "older brother", reading: "おにいさん", kanjiReading: "にい" },
+        { word: "従兄弟", meaning: "cousin", reading: "いとこ", kanjiReading: "いとこ" }
+    ]
 }
 ];
