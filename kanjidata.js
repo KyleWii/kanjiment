@@ -861,5 +861,53 @@ const KANJI_BANK = [
         { word: "お兄さん", meaning: "older brother", reading: "おにいさん", kanjiReading: "にい" },
         { word: "従兄弟", meaning: "cousin", reading: "いとこ", kanjiReading: "いとこ" }
     ]
+},
+{
+    id: "109", kanji: "弟", meaning: "younger brother, faithful service to elders",
+    vocab: [
+        { word: "弟", meaning: "younger brother", reading: "おとうと", kanjiReading: "おとうと" },
+        { word: "兄弟", meaning: "brothers", reading: "きょうだい", kanjiReading: "だい" },
+        { word: "弟子", meaning: "pupil", reading: "でし", kanjiReading: "で" }
+    ]
+},
+{
+    id: "110", kanji: "妹", meaning: "younger sister",
+    vocab: [
+        { word: "妹", meaning: "younger sister", reading: "いもうと", kanjiReading: "いもうと" },
+        { word: "姉妹", meaning: "sisters", reading: "しまい", kanjiReading: "まい" },
+        { word: "義妹", meaning: "sister-in-law", reading: "ぎまい", kanjiReading: "まい" }
+    ]
+},
+{
+    id: "111", kanji: "自", meaning: "oneself",
+    vocab: [
+        { word: "自立", meaning: "independence", reading: "じりつ", kanjiReading: "じ" },
+        { word: "自分", meaning: "oneself", reading: "じぶん", kanjiReading: "じ" },
+        { word: "自由", meaning: "freedom", reading: "じゆう", kanjiReading: "じ" }
+    ]
+},
+{
+    id: "112", kanji: "友", meaning: "friend",
+    vocab: [
+        { word: "友人", meaning: "friend", reading: "ゆうじん", kanjiReading: "ゆう" },
+        { word: "親友", meaning: "close friend", reading: "しんゆう", kanjiReading: "ゆう" },
+        { word: "友達", meaning: "friend", reading: "ともだち", kanjiReading: "とも" }
+    ]
+},
+{
+    id: "113", kanji: "体", meaning: "body, substance, object",
+    vocab: [
+        { word: "体", meaning: "body", reading: "からだ", kanjiReading: "からだ" },
+        { word: "大体", meaning: "generally", reading: "だいたい", kanjiReading: "たい" },
+        { word: "体内", meaning: "inside the body", reading: "たいない", kanjiReading: "たい" }
+    ]
+},
+{
+    id: "114", kanji: "毛", meaning: "fur, hair, feather",
+    vocab: [
+        { word: "毛", meaning: "hair, fur", reading: "け", kanjiReading: "け" },
+        { word: "毛虫", meaning: "caterpillar", reading: "けむし", kanjiReading: "け" },
+        { word: "羊毛", meaning: "wool", reading: "ようもう", kanjiReading: "もう" }
+    ]
 }
 ];
