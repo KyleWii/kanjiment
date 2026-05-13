@@ -5,7 +5,7 @@ It is designed to be efficient and extremely easy to set up, here are its featur
 * A nice spaced repetition system
 * Reset progress button
 
-**WARNING**: This is currently in the works, it is not finished. Our goals for it to be considered finished would be to have all 2136 Jōyō kanji (81/2136) and have substantial customization.
+**WARNING**: This is currently in the works, it is not finished. Our goals for it to be considered finished would be to have all 2136 Jōyō kanji (114/2136) and have substantial customization.
 
 
 To start, simply run index.html.
