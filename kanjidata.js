@@ -909,5 +909,101 @@ const KANJI_BANK = [
         { word: "毛虫", meaning: "caterpillar", reading: "けむし", kanjiReading: "け" },
         { word: "羊毛", meaning: "wool", reading: "ようもう", kanjiReading: "もう" }
     ]
+},
+{
+    id: "115", kanji: "頭", meaning: "head, counter for large animals",
+    vocab: [
+        { word: "頭", meaning: "head", reading: "あたま", kanjiReading: "あたま" },
+        { word: "頭部", meaning: "head", reading: "とうぶ", kanjiReading: "とう" },
+        { word: "頭痛", meaning: "headache", reading: "ずつう", kanjiReading: "ず" }
+    ]
+},
+{
+    id: "116", kanji: "顔", meaning: "face, expression",
+    vocab: [
+        { word: "顔", meaning: "face", reading: "かお", kanjiReading: "かお" },
+        { word: "笑顔", meaning: "smile", reading: "えがお", kanjiReading: "がお" },
+        { word: "顔面", meaning: "face of a person", reading: "がんめん", kanjiReading: "がん" }
+    ]
+},
+{
+    id: "117", kanji: "首", meaning: "neck, counter for songs and poems",
+    vocab: [
+        { word: "首", meaning: "neck", reading: "くび", kanjiReading: "くび" },
+        { word: "足首", meaning: "ankle", reading: "あしくび", kanjiReading: "くび" },
+        { word: "手首", meaning: "wrist", reading: "てくび", kanjiReading: "くび" }
+    ]
+},
+{
+    id: "118", kanji: "心", meaning: "heart, mind, spirit",
+    vocab: [
+        { word: "心", meaning: "heart", reading: "こころ", kanjiReading: "こころ" },
+        { word: "安心", meaning: "relief", reading: "あんしん", kanjiReading: "しん" },
+        { word: "心理", meaning: "mental state", reading: "しんり", kanjiReading: "しん" }
+    ]
+},
+{
+    id: "119", kanji: "時", meaning: "time, hour",
+    vocab: [
+        { word: "一時", meaning: "one o'clock", reading: "いちじ", kanjiReading: "じ" },
+        { word: "時代", meaning: "period", reading: "じだい", kanjiReading: "じ" },
+        { word: "時間", meaning: "time", reading: "じかん", kanjiReading: "じ" }
+    ]
+},
+{
+    id: "120", kanji: "曜", meaning: "weekday",
+    vocab: [
+        { word: "金曜日", meaning: "Friday", reading: "きんようび", kanjiReading: "よう" },
+        { word: "月曜日", meaning: "Monday", reading: "げつようび", kanjiReading: "よう" },
+        { word: "土曜日", meaning: "Saturday", reading: "どようび", kanjiReading: "よう" }
+    ]
+},
+{
+    id: "121", kanji: "朝", meaning: "morning, dynasty, regime",
+    vocab: [
+        { word: "朝ごはん", meaning: "breakfast", reading: "あさごはん", kanjiReading: "あさ" },
+        { word: "毎朝", meaning: "every morning", reading: "まいあさ", kanjiReading: "あさ" },
+        { word: "今朝", meaning: "this morning", reading: "けさ", kanjiReading: "さ" }
+    ]
+},
+{
+    id: "122", kanji: "昼", meaning: "daytime, noon",
+    vocab: [
+        { word: "昼ご飯", meaning: "lunch", reading: "ひるごはん", kanjiReading: "ひる" },
+        { word: "昼休み", meaning: "lunch break", reading: "ひるやすみ", kanjiReading: "ひる" },
+        { word: "昼寝", meaning: "nap", reading: "ひるね", kanjiReading: "ひる" }
+    ]
+},
+{
+    id: "123", kanji: "夜", meaning: "night, evening",
+    vocab: [
+        { word: "夜", meaning: "night", reading: "よる", kanjiReading: "よる" },
+        { word: "今夜", meaning: "tonight", reading: "こんや", kanjiReading: "や" },
+        { word: "夜中", meaning: "middle of the night", reading: "よなか", kanjiReading: "よ" }
+    ]
+},
+{
+    id: "124", kanji: "分", meaning: "part, minute of time, segment",
+    vocab: [
+        { word: "半分", meaning: "half", reading: "はんぶん", kanjiReading: "ぶん" },
+        { word: "気分", meaning: "mood", reading: "きぶん", kanjiReading: "ぶん" },
+        { word: "多分", meaning: "maybe", reading: "たぶん", kanjiReading: "ぶん" }
+    ]
+},
+{
+    id: "125", kanji: "週", meaning: "week",
+    vocab: [
+        { word: "先週", meaning: "last week", reading: "せんしゅう", kanjiReading: "しゅう" },
+        { word: "来週", meaning: "next week", reading: "らいしゅう", kanjiReading: "しゅう" },
+        { word: "今週", meaning: "this week", reading: "こんしゅう", kanjiReading: "しゅう" }
+    ]
+},
+{
+    id: "126", kanji: "春", meaning: "springtime, spring (season)",
+    vocab: [
+        { word: "春", meaning: "spring", reading: "はる", kanjiReading: "はる" },
+        { word: "春休み", meaning: "spring break", reading: "はるやすみ", kanjiReading: "はる" },
+        { word: "青春", meaning: "youth", reading: "せいしゅん", kanjiReading: "しゅん" }
+    ]
 }
 ];
