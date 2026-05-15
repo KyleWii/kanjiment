@@ -1005,5 +1005,53 @@ const KANJI_BANK = [
         { word: "春休み", meaning: "spring break", reading: "はるやすみ", kanjiReading: "はる" },
         { word: "青春", meaning: "youth", reading: "せいしゅん", kanjiReading: "しゅん" }
     ]
+},
+{
+    id: "127", kanji: "夏", meaning: "summer",
+    vocab: [
+        { word: "夏", meaning: "summer", reading: "なつ", kanjiReading: "なつ" },
+        { word: "夏休み", meaning: "summer vacation", reading: "なつやすみ", kanjiReading: "なつ" },
+        { word: "夏至", meaning: "summer solstice", reading: "げし", kanjiReading: "げ" }
+    ]
+},
+{
+    id: "128", kanji: "秋", meaning: "autumn",
+    vocab: [
+        { word: "秋", meaning: "autumn", reading: "あき", kanjiReading: "あき" },
+        { word: "秋風", meaning: "autumn breeze", reading: "あきかぜ", kanjiReading: "あき" },
+        { word: "今秋", meaning: "this autumn", reading: "こんしゅう", kanjiReading: "しゅう" }
+    ]
+},
+{
+    id: "129", kanji: "冬", meaning: "winter",
+    vocab: [
+        { word: "冬", meaning: "winter", reading: "ふゆ", kanjiReading: "ふゆ" },
+        { word: "冬休み", meaning: "winter holiday", reading: "ふゆやすみ", kanjiReading: "ふゆ" },
+        { word: "冬至", meaning: "winter solstice", reading: "とうじ", kanjiReading: "とう" }
+    ]
+},
+{
+    id: "130", kanji: "今", meaning: "now",
+    vocab: [
+        { word: "今", meaning: "now", reading: "いま", kanjiReading: "いま" },
+        { word: "今月", meaning: "this month", reading: "こんげつ", kanjiReading: "こん" },
+        { word: "今日", meaning: "today", reading: "きょう", kanjiReading: "きょう" }
+    ]
+},
+{
+    id: "131", kanji: "新", meaning: "new",
+    vocab: [
+        { word: "新しい", meaning: "new", reading: "あたらしい", kanjiReading: "あたら" },
+        { word: "新年", meaning: "new year", reading: "しんねん", kanjiReading: "しん" },
+        { word: "新聞", meaning: "newspaper", reading: "しんぶん", kanjiReading: "しん" }
+    ]
+},
+{
+    id: "132", kanji: "古", meaning: "old",
+    vocab: [
+        { word: "古い", meaning: "old", reading: "ふるい", kanjiReading: "ふる" },
+        { word: "中古", meaning: "secondhand", reading: "ちゅうこ", kanjiReading: "こ" },
+        { word: "古来", meaning: "from ancient times", reading: "こらい", kanjiReading: "こ" }
+    ]
 }
 ];
