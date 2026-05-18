@@ -1053,5 +1053,29 @@ const KANJI_BANK = [
         { word: "中古", meaning: "secondhand", reading: "ちゅうこ", kanjiReading: "こ" },
         { word: "古来", meaning: "from ancient times", reading: "こらい", kanjiReading: "こ" }
     ]
+},
+{
+    id: "133", kanji: "間", meaning: "interval, spcae",
+    vocab: [
+        { word: "間もなく", meaning: "soon", reading: "まもなく", kanjiReading: "ま" },
+        { word: "人間", meaning: "human being", reading: "にんげん", kanjiReading: "げん" },
+        { word: "時間", meaning: "time", reading: "じかん", kanjiReading: "かん" }
+    ]
+},
+{
+    id: "134", kanji: "方", meaning: "direction, person, alternative",
+    vocab: [
+        { word: "仕方", meaning: "method", reading: "しかた", kanjiReading: "かた" },
+        { word: "見方", meaning: "way of seeing", reading: "みかた", kanjiReading: "かた" },
+        { word: "夕方", meaning: "early evening", reading: "ゆうがた", kanjiReading: "がた" }
+    ]
+},
+{
+    id: "135", kanji: "北", meaning: "north",
+    vocab: [
+        { word: "北", meaning: "north", reading: "きた", kanjiReading: "きた" },
+        { word: "北口", meaning: "north exit", reading: "きたぐち", kanjiReading: "きた" },
+        { word: "北アメリカ", meaning: "North America", reading: "きたあめりか", kanjiReading: "きた" }
+    ]
 }
 ];
