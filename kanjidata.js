@@ -1077,5 +1077,101 @@ const KANJI_BANK = [
         { word: "北口", meaning: "north exit", reading: "きたぐち", kanjiReading: "きた" },
         { word: "北アメリカ", meaning: "North America", reading: "きたあめりか", kanjiReading: "きた" }
     ]
+},
+{
+    id: "136", kanji: "南", meaning: "south",
+    vocab: [
+        { word: "南", meaning: "south", reading: "みなみ", kanjiReading: "みなみ" },
+        { word: "南口", meaning: "south exit", reading: "みなみぐち", kanjiReading: "みなみ" },
+        { word: "南アフリカ", meaning: "South Africa", reading: "みなみあふりか", kanjiReading: "みなみ" }
+    ]
+},
+{
+    id: "137", kanji: "東", meaning: "east",
+    vocab: [
+        { word: "東", meaning: "east", reading: "ひがし", kanjiReading: "ひがし" },
+        { word: "東口", meaning: "east exit", reading: "ひがしぐち", kanjiReading: "ひがし" },
+        { word: "東アジア", meaning: "East Asia", reading: "ひがしあじあ", kanjiReading: "ひがし" }
+    ]
+},
+{
+    id: "138", kanji: "西", meaning: "west, Spain",
+    vocab: [
+        { word: "西", meaning: "west", reading: "にし", kanjiReading: "にし" },
+        { word: "西口", meaning: "west exit", reading: "にしぐち", kanjiReading: "にし" },
+        { word: "西ヨーロッパ", meaning: "Western Europe", reading: "にしよーろっぱ", kanjiReading: "にし" }
+    ]
+},
+{
+    id: "139", kanji: "遠", meaning: "distant, far",
+    vocab: [
+        { word: "遠い", meaning: "far", reading: "とおい", kanjiReading: "とお" },
+        { word: "遠足", meaning: "excursion", reading: "えんそく", kanjiReading: "えん" },
+        { word: "遠視", meaning: "farsightedness", reading: "えんし", kanjiReading: "えん" }
+    ]
+},
+{
+    id: "140", kanji: "近", meaning: "near, early, akin",
+    vocab: [
+        { word: "近い", meaning: "close", reading: "ちかい", kanjiReading: "ちか" },
+        { word: "近年", meaning: "recent years", reading: "きんねん", kanjiReading: "きん" },
+        { word: "近日", meaning: "soon", reading: "きんじつ", kanjiReading: "きん" }
+    ]
+},
+{
+    id: "141", kanji: "前", meaning: "in front, before",
+    vocab: [
+        { word: "前", meaning: "front", reading: "まえ", kanjiReading: "まえ" },
+        { word: "お前", meaning: "you (rude)", reading: "おまえ", kanjiReading: "まえ" },
+        { word: "午前", meaning: "AM", reading: "ごぜん", kanjiReading: "ぜん" }
+    ]
+},
+{
+    id: "142", kanji: "後", meaning: "behind, back, later",
+    vocab: [
+        { word: "後で", meaning: "after", reading: "あとで", kanjiReading: "あと" },
+        { word: "後ろ", meaning: "behind", reading: "うしろ", kanjiReading: "うし" },
+        { word: "午後", meaning: "PM", reading: "ごご", kanjiReading: "ご" }
+    ]
+},
+{
+    id: "143", kanji: "内", meaning: "inside, within, between",
+    vocab: [
+        { word: "内", meaning: "inside", reading: "うち", kanjiReading: "うち" },
+        { word: "年内", meaning: "by the end of the year", reading: "ねんない", kanjiReading: "ない" },
+        { word: "車内", meaning: "inside the car", reading: "しゃない", kanjiReading: "ない" }
+    ]
+},
+{
+    id: "144", kanji: "外", meaning: "outside",
+    vocab: [
+        { word: "外", meaning: "outside", reading: "そと", kanjiReading: "そと" },
+        { word: "外人", meaning: "foreigner", reading: "がいじん", kanjiReading: "がい" },
+        { word: "外交", meaning: "diplomacy", reading: "がいこう", kanjiReading: "がい" }
+    ]
+},
+{
+    id: "145", kanji: "場", meaning: "location, place",
+    vocab: [
+        { word: "入場", meaning: "entrance", reading: "にゅうじょう", kanjiReading: "じょう" },
+        { word: "場所", meaning: "place", reading: "ばしょ", kanjiReading: "ば" },
+        { word: "立場", meaning: "standpoint", reading: "たちば", kanjiReading: "ば" }
+    ]
+},
+{
+    id: "146", kanji: "地", meaning: "ground, earth",
+    vocab: [
+        { word: "土地", meaning: "land", reading: "とち", kanjiReading: "ち" },
+        { word: "地図", meaning: "map", reading: "ちず", kanjiReading: "ち" },
+        { word: "地下", meaning: "underground", reading: "ちか", kanjiReading: "ち" }
+    ]
+},
+{
+    id: "147", kanji: "国", meaning: "country",
+    vocab: [
+        { word: "中国", meaning: "China", reading: "ちゅうごく", kanjiReading: "ごく" },
+        { word: "外国", meaning: "foreign country", reading: "がいこく", kanjiReading: "こく" },
+        { word: "外国人", meaning: "foreign person", reading: "がいこくじん", kanjiReading: "こく" }
+    ]
 }
 ];
