@@ -315,6 +315,15 @@
     let activeCard = null;
     let timer = null;
 
+    // tts - use google translate api if online, skip if offline
+    function speak(text) {
+      if (!navigator.onLine) return;
+      const audio = new Audio(
+        `https://translate.google.com/translate_tts?ie=UTF-8&q=${encodeURIComponent(text)}&tl=ja&client=tw-ob`
+      );
+      audio.play().catch(() => {});
+    }
+
     function now() {
       return Date.now();
     }
@@ -342,7 +351,7 @@
         if (!raw) return makeDefaultState();
         const parsed = JSON.parse(raw);
 
-        // Repair save if the bank changed.
+        // repair save if the bank changes
         for (const entry of KANJI_BANK) {
           if (!parsed.items.some(item => item.id === entry.id)) {
             parsed.items.push({
@@ -440,21 +449,15 @@
       document.getElementById("lockedCount").textContent = state.items.filter(item => !item.unlocked).length;
     }
 
-function formatDuration(ms) {
-  const minutes = Math.ceil(ms / 60000);
-
-  if (minutes <= 0) return "now";
-
-  // Keep 90 minutes as 90m instead of rounding to 2h
-  if (minutes < 120) return `${minutes}m`;
-
-  const hours = Math.floor(minutes / 60);
-
-  if (hours < 48) return `${hours}h`;
-
-  const days = Math.floor(hours / 24);
-  return `${days}d`;
-}
+    function formatDuration(ms) {
+      const minutes = Math.ceil(ms / 60000);
+      if (minutes <= 0) return "now";
+      if (minutes < 120) return `${minutes}m`;
+      const hours = Math.floor(minutes / 60);
+      if (hours < 48) return `${hours}h`;
+      const days = Math.floor(hours / 24);
+      return `${days}d`;
+    }
 
     function renderIdle() {
       clearInterval(timer);
@@ -594,17 +597,18 @@ function formatDuration(ms) {
     function answerMeaning(item, choice) {
       const data = getData(item.id);
       const message = document.getElementById("message");
+
+      for (const btn of document.querySelectorAll(".choice")) {
+        btn.disabled = true;
+      }
+
       if (choice === data.meaning) {
         item.correctTotal++;
         advanceItem(item);
         saveState();
         message.className = "message good";
-        message.textContent = "Correct.";
-        reviewArea.insertAdjacentHTML(
-          "beforeend",
-          '<button id="nextBtn">Next</button>'
-         );
-
+        message.textContent = "Correct!";
+        reviewArea.insertAdjacentHTML("beforeend", '<button id="nextBtn">Next</button>');
         document.getElementById("nextBtn").addEventListener("click", startStudy);
       } else {
         item.incorrectTotal++;
@@ -612,7 +616,7 @@ function formatDuration(ms) {
         item.dueAt = now();
         saveState();
         message.className = "message bad";
-        message.textContent = "Incorrect. This item starts Stage 1 over.";
+        message.textContent = "Incorrect. This starts Stage 1 over.";
         setTimeout(() => renderMeaningCard(item), 800);
       }
       updateStats();
@@ -632,20 +636,27 @@ function formatDuration(ms) {
       const correct = normalizeReading(vocab.reading);
       const message = document.getElementById("message");
 
+      const readingInput = document.getElementById("readingInput");
+      const submitBtn = document.querySelector("#readingForm button[type='submit']");
+      if (readingInput) readingInput.disabled = true;
+      if (submitBtn) submitBtn.disabled = true;
+
       if (answer === correct) {
+        // tts
+        speak(vocab.word);
+
         item.correctTotal++;
         message.className = "message good";
-        message.innerHTML = `Correct. ${vocab.word} means “${vocab.meaning}”. Reading: ${boldKanjiReading(vocab.reading, vocab.kanjiReading)}.`;
+        message.innerHTML = `Correct. ${vocab.word} means "${vocab.meaning}". Reading: ${boldKanjiReading(vocab.reading, vocab.kanjiReading)}.`;
         item.vocabIndex = ((item.vocabIndex || 0) + 1) % data.vocab.length;
         advanceItem(item);
         saveState();
-        reviewArea.insertAdjacentHTML(
-          "beforeend",
-          '<button id="nextBtn">Next</button>'
-        );
-
+        reviewArea.insertAdjacentHTML("beforeend", '<button id="nextBtn">Next</button>');
         document.getElementById("nextBtn").addEventListener("click", startStudy);
       } else {
+        // tts
+        speak(vocab.word);
+
         item.incorrectTotal++;
         item.step = 0;
         item.dueAt = now();
@@ -658,36 +669,36 @@ function formatDuration(ms) {
     }
 
     function advanceItem(item) {
-  if (item.stage === 1) {
-    if (item.step < STAGE_ONE_TWO_INTERVALS.length) {
-      item.dueAt = now() + STAGE_ONE_TWO_INTERVALS[item.step];
-      item.step++;
-    } else {
-      item.stage = 2;
-      item.step = 0;
-      item.dueAt = now();
-    }
-    return;
-  }
+      if (item.stage === 1) {
+        if (item.step < STAGE_ONE_TWO_INTERVALS.length) {
+          item.dueAt = now() + STAGE_ONE_TWO_INTERVALS[item.step];
+          item.step++;
+        } else {
+          item.stage = 2;
+          item.step = 0;
+          item.dueAt = now();
+        }
+        return;
+      }
 
-  if (item.stage === 2) {
-    if (item.step < STAGE_ONE_TWO_INTERVALS.length) {
-      item.dueAt = now() + STAGE_ONE_TWO_INTERVALS[item.step];
-      item.step++;
-    } else {
-      item.stage = 3;
-      item.step = 0;
-      item.dueAt = now();
-    }
-    return;
-  }
+      if (item.stage === 2) {
+        if (item.step < STAGE_ONE_TWO_INTERVALS.length) {
+          item.dueAt = now() + STAGE_ONE_TWO_INTERVALS[item.step];
+          item.step++;
+        } else {
+          item.stage = 3;
+          item.step = 0;
+          item.dueAt = now();
+        }
+        return;
+      }
 
-  if (item.stage === 3) {
-    const interval = STAGE_THREE_INTERVALS[Math.min(item.step, STAGE_THREE_INTERVALS.length - 1)];
-    item.dueAt = now() + interval;
-    item.step = Math.min(item.step + 1, STAGE_THREE_INTERVALS.length - 1);
-  }
-}
+      if (item.stage === 3) {
+        const interval = STAGE_THREE_INTERVALS[Math.min(item.step, STAGE_THREE_INTERVALS.length - 1)];
+        item.dueAt = now() + interval;
+        item.step = Math.min(item.step + 1, STAGE_THREE_INTERVALS.length - 1);
+      }
+    }
 
     studyBtn.addEventListener("click", startStudy);
 
