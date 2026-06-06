@@ -600,7 +600,12 @@ function formatDuration(ms) {
         saveState();
         message.className = "message good";
         message.textContent = "Correct.";
-        setTimeout(startStudy, 450);
+        reviewArea.insertAdjacentHTML(
+          "beforeend",
+          '<button id="nextBtn">Next</button>'
+         );
+
+        document.getElementById("nextBtn").addEventListener("click", startStudy);
       } else {
         item.incorrectTotal++;
         item.step = 0;
@@ -634,7 +639,12 @@ function formatDuration(ms) {
         item.vocabIndex = ((item.vocabIndex || 0) + 1) % data.vocab.length;
         advanceItem(item);
         saveState();
-        setTimeout(startStudy, 1500);
+        reviewArea.insertAdjacentHTML(
+          "beforeend",
+          '<button id="nextBtn">Next</button>'
+        );
+
+        document.getElementById("nextBtn").addEventListener("click", startStudy);
       } else {
         item.incorrectTotal++;
         item.step = 0;
