@@ -1173,5 +1173,29 @@ const KANJI_BANK = [
         { word: "外国", meaning: "foreign country", reading: "がいこく", kanjiReading: "こく" },
         { word: "外国人", meaning: "foreign person", reading: "がいこくじん", kanjiReading: "こく" }
     ]
+},
+{
+    id: "148", kanji: "園", meaning: "park, garden, yard",
+    vocab: [
+        { word: "公園", meaning: "public park", reading: "こうえん", kanjiReading: "えん" },
+        { word: "動物園", meaning: "zoo", reading: "どうぶつえん", kanjiReading: "えん" },
+        { word: "遊園地", meaning: "amusement park", reading: "ゆうえんち", kanjiReading: "えん" }
+    ]
+},
+{
+    id: "149", kanji: "谷", meaning: "valley",
+    vocab: [
+        { word: "谷", meaning: "valley", reading: "たに", kanjiReading: "たに" },
+        { word: "峡谷", meaning: "ravine", reading: "きょうこく", kanjiReading: "こく" },
+        { word: "渓谷", meaning: "valley", reading: "けいこく", kanjiReading: "こく" }
+    ]
+},
+{
+    id: "150", kanji: "野", meaning: "plains, field, rustic",
+    vocab: [
+        { word: "野菜", meaning: "vegetable", reading: "やさい", kanjiReading: "や" },
+        { word: "野球", meaning: "baseball", reading: "やきゅう", kanjiReading: "や" },
+        { word: "野獣", meaning: "wild beast", reading: "やじゅう", kanjiReading: "や" }
+    ]
 }
 ];
