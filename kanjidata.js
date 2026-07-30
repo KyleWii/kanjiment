@@ -1269,5 +1269,77 @@ const KANJI_BANK = [
         { word: "海外", meaning: "overseas", reading: "かいがい", kanjiReading: "かい" },
         { word: "海岸", meaning: "seashore", reading: "かいがん", kanjiReading: "かい" }
     ]
+},
+{
+    id: "160", kanji: "岩", meaning: "boulder, rock, cliff",
+    vocab: [
+        { word: "岩", meaning: "boulder", reading: "いわ", kanjiReading: "いわ" },
+        { word: "溶岩", meaning: "lava", reading: "ようがん", kanjiReading: "がん" },
+        { word: "岩礁", meaning: "reef", reading: "がんしょう", kanjiReading: "がん" }
+    ]
+},
+{
+    id: "161", kanji: "星", meaning: "star, spot, dot",
+    vocab: [
+        { word: "水星", meaning: "Mercury", reading: "すいせい", kanjiReading: "せい" },
+        { word: "土星", meaning: "Saturn", reading: "どせい", kanjiReading: "せい" },
+        { word: "金星", meaning: "Venus", reading: "きんせい", kanjiReading: "せい" }
+    ]
+},
+{
+    id: "162", kanji: "室", meaning: "room, apartment, chamber",
+    vocab: [
+        { word: "教室", meaning: "classroom", reading: "きょうしつ", kanjiReading: "しつ" },
+        { word: "客室", meaning: "guest room", reading: "きゃくしつ", kanjiReading: "しつ" },
+        { word: "和室", meaning: "Japanese style room", reading: "わしつ", kanjiReading: "しつ" }
+    ]
+},
+{
+    id: "163", kanji: "戸", meaning: "door, counter for houses",
+    vocab: [
+        { word: "戸", meaning: "door", reading: "と", kanjiReading: "と" },
+        { word: "戸口", meaning: "doorway", reading: "どぐち", kanjiReading: "ど" },
+        { word: "井戸", meaning: "well", reading: "いど", kanjiReading: "ど" }
+    ]
+},
+{
+    id: "164", kanji: "家", meaning: "house, home, family",
+    vocab: [
+        { word: "家", meaning: "house", reading: "いえ", kanjiReading: "いえ" },
+        { word: "家具", meaning: "furniture", reading: "かぐ", kanjiReading: "か" },
+        { word: "家族", meaning: "family", reading: "かぞく", kanjiReading: "か" }
+    ]
+},
+{
+    id: "165", kanji: "寺", meaning: "Buddhist temple",
+    vocab: [
+        { word: "寺", meaning: "temple", reading: "てら", kanjiReading: "てら" },
+        { word: "禅寺", meaning: "zen temple", reading: "ぜんでら", kanjiReading: "でら" },
+        { word: "古寺", meaning: "old temple", reading: "こじ", kanjiReading: "じ" }
+    ]
+},
+{
+    id: "166", kanji: "通", meaning: "traffic, pass through, avenue",
+    vocab: [
+        { word: "交通", meaning: "traffic", reading: "こうつう", kanjiReading: "つう" },
+        { word: "通る", meaning: "to pass through", reading: "とおる", kanjiReading: "とお" },
+        { word: "通り", meaning: "avenue", reading: "とおり", kanjiReading: "とお" }
+    ]
+},
+{
+    id: "167", kanji: "門", meaning: "gate, counter for cannons",
+    vocab: [
+        { word: "門", meaning: "gate", reading: "もん", kanjiReading: "もん" },
+        { word: "入門", meaning: "admission", reading: "にゅうもん", kanjiReading: "もん" },
+        { word: "専門", meaning: "specialty", reading: "せんもん", kanjiReading: "もん" }
+    ]
+},
+{
+    id: "168", kanji: "道", meaning: "road-way, street, district",
+    vocab: [
+        { word: "道", meaning: "road", reading: "みち", kanjiReading: "みち" },
+        { word: "歩道", meaning: "sidewalk", reading: "ほどう", kanjiReading: "どう" },
+        { word: "水道", meaning: "water supply", reading: "すいどう", kanjiReading: "どう" }
+    ]
 }
 ];
