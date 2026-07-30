@@ -1197,5 +1197,77 @@ const KANJI_BANK = [
         { word: "野球", meaning: "baseball", reading: "やきゅう", kanjiReading: "や" },
         { word: "野獣", meaning: "wild beast", reading: "やじゅう", kanjiReading: "や" }
     ]
+},
+{
+    id: "151", kanji: "原", meaning: "meadow, original, primitive",
+    vocab: [
+        { word: "原子", meaning: "atom", reading: "げんし", kanjiReading: "げん" },
+        { word: "原因", meaning: "cause", reading: "げんいん", kanjiReading: "げん" },
+        { word: "原型", meaning: "prototype", reading: "げんけい", kanjiReading: "げん" }
+    ]
+},
+{
+    id: "152", kanji: "里", meaning: "ri, village, parent's home",
+    vocab: [
+        { word: "里", meaning: "hometown", reading: "さと", kanjiReading: "さと" },
+        { word: "人里", meaning: "human habitation", reading: "ひとざと", kanjiReading: "ざと" },
+        { word: "郷里", meaning: "hometown", reading: "きょうり", kanjiReading: "り" }
+    ]
+},
+{
+    id: "153", kanji: "市", meaning: "market, city, town",
+    vocab: [
+        { word: "市", meaning: "city", reading: "し", kanjiReading: "し" },
+        { word: "市立", meaning: "municipal", reading: "しりつ", kanjiReading: "し" },
+        { word: "都市", meaning: "city", reading: "とし", kanjiReading: "し" }
+    ]
+},
+{
+    id: "154", kanji: "京", meaning: "capital",
+    vocab: [
+        { word: "東京", meaning: "Tokyo", reading: "とうきょう", kanjiReading: "きょう" },
+        { word: "京都", meaning: "Kyoto", reading: "きょうと", kanjiReading: "きょう" },
+        { word: "東京弁", meaning: "Tokyo Dialect", reading: "とうきょうべん", kanjiReading: "きょう" }
+    ]
+},
+{
+    id: "155", kanji: "風", meaning: "wind, air, style",
+    vocab: [
+        { word: "風", meaning: "wind", reading: "かぜ", kanjiReading: "かぜ" },
+        { word: "風船", meaning: "balloon", reading: "ふうせん", kanjiReading: "ふう" },
+        { word: "台風", meaning: "typhoon", reading: "たいふう", kanjiReading: "ふう" }
+    ]
+},
+{
+    id: "156", kanji: "雪", meaning: "snow",
+    vocab: [
+        { word: "雪", meaning: "snow", reading: "ゆき", kanjiReading: "ゆき" },
+        { word: "雪国", meaning: "snow country, snowy region", reading: "ゆきぐに", kanjiReading: "ゆき" },
+        { word: "雪上", meaning: "on the snow", reading: "せつじょう", kanjiReading: "せつ" }
+    ]
+},
+{
+    id: "157", kanji: "雲", meaning: "cloud",
+    vocab: [
+        { word: "雲", meaning: "cloud", reading: "くも", kanjiReading: "くも" },
+        { word: "白雲", meaning: "white clouds", reading: "しらくも", kanjiReading: "くも" },
+        { word: "星雲", meaning: "nebula, galaxy", reading: "せいうん", kanjiReading: "うん" }
+    ]
+},
+{
+    id: "158", kanji: "池", meaning: "pond, cistern, pool",
+    vocab: [
+        { word: "池", meaning: "pond", reading: "いけ", kanjiReading: "いけ" },
+        { word: "電池", meaning: "battery", reading: "でんち", kanjiReading: "ち" },
+        { word: "人工池", meaning: "artificial pool", reading: "じんこういけ", kanjiReading: "いけ" }
+    ]
+},
+{
+    id: "159", kanji: "海", meaning: "sea, ocean",
+    vocab: [
+        { word: "海", meaning: "ocean", reading: "うみ", kanjiReading: "うみ" },
+        { word: "海外", meaning: "overseas", reading: "かいがい", kanjiReading: "かい" },
+        { word: "海岸", meaning: "seashore", reading: "かいがん", kanjiReading: "かい" }
+    ]
 }
 ];
