@@ -9,3 +9,5 @@ It is designed to be efficient and extremely easy to set up, here are its featur
 
 
 To start, simply run index.html.
+
+*Disclaimer*: This project is NOT vibe-coded, its code has very little to no assistance of artifical intelligence. All contributions are human.
