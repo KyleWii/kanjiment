@@ -1341,5 +1341,53 @@ const KANJI_BANK = [
         { word: "歩道", meaning: "sidewalk", reading: "ほどう", kanjiReading: "どう" },
         { word: "水道", meaning: "water supply", reading: "すいどう", kanjiReading: "どう" }
     ]
+},
+{
+    id: "169", kanji: "話", meaning: "tale, talk",
+    vocab: [
+        { word: "会話", meaning: "conversation", reading: "かいわ", kanjiReading: "わ" },
+        { word: "電話", meaning: "telephone", reading: "でんわ", kanjiReading: "わ" },
+        { word: "話す", meaning: "to speak", reading: "はなす", kanjiReading: "はな" }
+    ]
+},
+{
+    id: "170", kanji: "言", meaning: "say, word",
+    vocab: [
+        { word: "言う", meaning: "to say", reading: "いう", kanjiReading: "い" },
+        { word: "方言", meaning: "dialect", reading: "ほうげん", kanjiReading: "げん" },
+        { word: "助言", meaning: "advice", reading: "じょげん", kanjiReading: "げん" }
+    ]
+},
+{
+    id: "171", kanji: "答", meaning: "solution, answer",
+    vocab: [
+        { word: "答え", meaning: "answer", reading: "こたえ", kanjiReading: "こた" },
+        { word: "答える", meaning: "to answer", reading: "こたえる", kanjiReading: "こた" },
+        { word: "回答", meaning: "solving", reading: "かいとう", kanjiReading: "とう" }
+    ]
+},
+{
+    id: "172", kanji: "声", meaning: "voice",
+    vocab: [
+        { word: "声", meaning: "voice", reading: "こえ", kanjiReading: "こえ" },
+        { word: "大声", meaning: "loud voice", reading: "おおごえ", kanjiReading: "ごえ" },
+        { word: "鳴き声", meaning: "animal cry", reading: "なきごえ", kanjiReading: "ごえ" }
+    ]
+},
+{
+    id: "173", kanji: "聞", meaning: "hear, ask, listen",
+    vocab: [
+        { word: "聞く", meaning: "to hear", reading: "きく", kanjiReading: "き" },
+        { word: "新聞", meaning: "newspaper", reading: "しんぶん", kanjiReading: "ぶん" },
+        { word: "醜聞", meaning: "scandal", reading: "しゅうぶん", kanjiReading: "ぶん" }
+    ]
+},
+{
+    id: "174", kanji: "語", meaning: "word, speech, language",
+    vocab: [
+        { word: "日本語", meaning: "Japanese language", reading: "にほんご", kanjiReading: "ご" },
+        { word: "言語", meaning: "language", reading: "げんご", kanjiReading: "ご" },
+        { word: "物語", meaning: "tale", reading: "ものがたり", kanjiReading: "がたり" }
+    ]
 }
 ];
