@@ -1389,5 +1389,29 @@ const KANJI_BANK = [
         { word: "言語", meaning: "language", reading: "げんご", kanjiReading: "ご" },
         { word: "物語", meaning: "tale", reading: "ものがたり", kanjiReading: "がたり" }
     ]
+},
+{
+    id: "175", kanji: "読", meaning: "read",
+    vocab: [
+        { word: "読む", meaning: "to read", reading: "よむ", kanjiReading: "よ" },
+        { word: "読者", meaning: "reader", reading: "どくしゃ", kanjiReading: "どく" },
+        { word: "購読", meaning: "subscription", reading: "こうどく", kanjiReading: "どく" }
+    ]
+},
+{
+    id: "176", kanji: "書", meaning: "write",
+    vocab: [
+        { word: "辞書", meaning: "dictionary", reading: "じしょ", kanjiReading: "しょ" },
+        { word: "図書館", meaning: "library", reading: "としょかん", kanjiReading: "しょ" },
+        { word: "教科書", meaning: "textbook", reading: "きょうかしょ", kanjiReading: "しょ" }
+    ]
+},
+{
+    id: "177", kanji: "記", meaning: "scribe, account, narrative",
+    vocab: [
+        { word: "日記", meaning: "diary", reading: "にっき", kanjiReading: "き" },
+        { word: "記事", meaning: "article", reading: "きじ", kanjiReading: "き" },
+        { word: "暗記", meaning: "memorization", reading: "あんき", kanjiReading: "き" }
+    ]
 }
 ];
