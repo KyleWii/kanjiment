@@ -1461,5 +1461,53 @@ const KANJI_BANK = [
         { word: "教室", meaning: "classroom", reading: "きょうしつ", kanjiReading: "きょう" },
         { word: "教育", meaning: "education", reading: "きょういく", kanjiReading: "きょう" }
     ]
+},
+{
+    id: "184", kanji: "晴", meaning: "clear up",
+    vocab: [
+        { word: "晴れ", meaning: "clear weather", reading: "はれ", kanjiReading: "は" },
+        { word: "晴れる", meaning: "to clear up", reading: "はれる", kanjiReading: "は" },
+        { word: "素晴らしい", meaning: "wonderful", reading: "すばらしい", kanjiReading: "すば" }
+    ]
+},
+{
+    id: "185", kanji: "思", meaning: "think",
+    vocab: [
+        { word: "思う", meaning: "to think", reading: "おもう", kanjiReading: "おも" },
+        { word: "思い出す", meaning: "to remember", reading: "おもいだす", kanjiReading: "おも" },
+        { word: "思想", meaning: "ideology", reading: "しそう", kanjiReading: "し" }
+    ]
+},
+{
+    id: "186", kanji: "考", meaning: "consider, think over",
+    vocab: [
+        { word: "考える", meaning: "to think about", reading: "かんがえる", kanjiReading: "かんが" },
+        { word: "考古学", meaning: "archeology", reading: "こうこがく", kanjiReading: "こう" },
+        { word: "考慮", meaning: "consideration", reading: "こうりょ", kanjiReading: "こう" }
+    ]
+},
+{
+    id: "187", kanji: "知", meaning: "know, wisdom",
+    vocab: [
+        { word: "知る", meaning: "to know", reading: "しる", kanjiReading: "し" },
+        { word: "お知らせ", meaning: "notice", reading: "おしらせ", kanjiReading: "し" },
+        { word: "無知", meaning: "consideration", reading: "むち", kanjiReading: "ち" }
+    ]
+},
+{
+    id: "188", kanji: "才", meaning: "genius, years old, cubic shaku",
+    vocab: [
+        { word: "天才", meaning: "genius", reading: "てんさい", kanjiReading: "さい" },
+        { word: "才能", meaning: "talent", reading: "さいのう", kanjiReading: "さい" },
+        { word: "漫才", meaning: "comic dialogue", reading: "まんざい", kanjiReading: "ざい" }
+    ]
+},
+{
+    id: "189", kanji: "理", meaning: "logic, arrangement, reason",
+    vocab: [
+        { word: "地理", meaning: "geography", reading: "ちり", kanjiReading: "り" },
+        { word: "心理", meaning: "mental state", reading: "しんり", kanjiReading: "り" },
+        { word: "理由", meaning: "reason", reading: "りゆう", kanjiReading: "り" }
+    ]
 }
 ];
