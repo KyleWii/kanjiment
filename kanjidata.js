@@ -1413,5 +1413,53 @@ const KANJI_BANK = [
         { word: "記事", meaning: "article", reading: "きじ", kanjiReading: "き" },
         { word: "暗記", meaning: "memorization", reading: "あんき", kanjiReading: "き" }
     ]
+},
+{
+    id: "178", kanji: "紙", meaning: "paper",
+    vocab: [
+        { word: "紙", meaning: "paper", reading: "かみ", kanjiReading: "かみ" },
+        { word: "手紙", meaning: "letter", reading: "てがみ", kanjiReading: "がみ" },
+        { word: "壁紙", meaning: "wallpaper", reading: "かべがみ", kanjiReading: "がみ" }
+    ]
+},
+{
+    id: "179", kanji: "画", meaning: "brush-stroke, picture",
+    vocab: [
+        { word: "映画", meaning: "movie", reading: "えいが", kanjiReading: "が" },
+        { word: "画像", meaning: "image", reading: "がぞう", kanjiReading: "が" },
+        { word: "計画", meaning: "plan", reading: "けいかく", kanjiReading: "かく" }
+    ]
+},
+{
+    id: "180", kanji: "絵", meaning: "picture, drawing, painting",
+    vocab: [
+        { word: "絵", meaning: "picture", reading: "え", kanjiReading: "え" },
+        { word: "絵文字", meaning: "emoji", reading: "えもじ", kanjiReading: "え" },
+        { word: "墨絵", meaning: "ink painting", reading: "すみえ", kanjiReading: "え" }
+    ]
+},
+{
+    id: "181", kanji: "図", meaning: "map, drawing, plan",
+    vocab: [
+        { word: "地図", meaning: "map", reading: "ちず", kanjiReading: "ず" },
+        { word: "図書館", meaning: "library", reading: "としょかん", kanjiReading: "と" },
+        { word: "図説", meaning: "illustration", reading: "ずせつ", kanjiReading: "ず" }
+    ]
+},
+{
+    id: "182", kanji: "工", meaning: "craft, construction, katakana e radical (no. 48)",
+    vocab: [
+        { word: "人工", meaning: "artificial", reading: "じんこう", kanjiReading: "こう" },
+        { word: "工学", meaning: "engineering", reading: "こうがく", kanjiReading: "こう" },
+        { word: "工作", meaning: "handicraft", reading: "こうさく", kanjiReading: "こう" }
+    ]
+},
+{
+    id: "183", kanji: "教", meaning: "teach, faith, doctrine",
+    vocab: [
+        { word: "教える", meaning: "to teach", reading: "おしえる", kanjiReading: "おし" },
+        { word: "教室", meaning: "classroom", reading: "きょうしつ", kanjiReading: "きょう" },
+        { word: "教育", meaning: "education", reading: "きょういく", kanjiReading: "きょう" }
+    ]
 }
 ];
