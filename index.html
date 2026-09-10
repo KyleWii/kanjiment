@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kanjiment</title>
-  // css
+  <!-- css -->
   <style>
     :root {
       --bg: #040404;
@@ -649,7 +649,7 @@
       if (submitBtn) submitBtn.disabled = true;
 
       if (answer === correct) {
-        // tts
+        <!-- tts -->
         speak(vocab.word);
 
         item.correctTotal++;
@@ -661,7 +661,7 @@
         reviewArea.insertAdjacentHTML("beforeend", '<button id="nextBtn">Next</button>');
         document.getElementById("nextBtn").addEventListener("click", startStudy);
       } else {
-        // tts
+        <!-- tts -->
         speak(vocab.word);
 
         item.incorrectTotal++;
