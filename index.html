@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kanjiment</title>
-  #css
+  // css
   <style>
     :root {
       --bg: #040404;
@@ -246,7 +246,7 @@
       </div>
     </header>
 
-    # shows the stages
+    // shows the stages
     <div class="grid">
       <aside class="sidebar">
         <div class="stage-card">
@@ -283,17 +283,17 @@
   </div>
 
   <script>
-    # storage key, if you want to use a different save, you can edit the storage_key value.
+    // storage key, if you want to use a different save, you can edit the storage_key value.
     const STORAGE_KEY = "kanjiment.save.v1";
 
-    # intervals for stage one AND two
+    // intervals for stage one AND two
     const STAGE_ONE_TWO_INTERVALS = [
       60 * 1000,
       3 * 60 * 1000,
       90 * 60 * 1000
     ];
 
-    # intervals for stage three personalized for the balance of maximum efficiency yet minimal effort (this is not to say that language learning doesn't take effort)
+    // intervals for stage three personalized for the balance of maximum efficiency yet minimal effort (this is not to say that language learning doesn't take effort)
     const STAGE_THREE_INTERVALS = [
       60 * 1000,
       3 * 60 * 1000,
@@ -421,9 +421,9 @@
 
     function unlockNextBatch() {
       if (!canUnlockMoreKanji()) return;
-      # sets the 3 next kanji
+      // sets the 3 next kanji
       const toUnlock = state.items.filter(item => !item.unlocked).slice(0, 3);
-      # unlocks those 3 next kanji
+      // unlocks those 3 next kanji
       for (const item of toUnlock) {
         item.unlocked = true;
         item.stage = 1;
