@@ -115,8 +115,8 @@ const KANJI_BANK = [
     id: "15", kanji: "上", meaning: "above, up",
     vocab: [
         { word: "上", meaning: "above", reading: "うえ", kanjiReading: "うえ" },
-        { word: "上る", meaning: "to climb", reading: "のぼる", kanjiReading: "のぼ" },
-        { word: "上手", meaning: "good at", reading: "じょうず", kanjiReading: "じょう" }
+        { word: "上る", meaning: "to climb", reading: "のぼる", kanjiReading: "のぼ", example: { ja: "口あれば京へ上る。", en: "If you are up for it, let's go!" } },
+        { word: "上手", meaning: "good at", reading: "じょうず", kanjiReading: "じょう", example: { ja: "上手に歌えた。", en: "I sang well." } }
     ]
 },
 {
@@ -162,7 +162,7 @@ const KANJI_BANK = [
 {
     id: "21", kanji: "小", meaning: "little, small",
     vocab: [
-        { word: "小さい", meaning: "small", reading: "ちいさい", kanjiReading: "ちい" },
+        { word: "小さい", meaning: "small", reading: "ちいさい", kanjiReading: "ちい", example: { ja: "手は小さいんだ。", en: "I have small hands." } },
         { word: "小皿", meaning: "small plate", reading: "こざら", kanjiReading: "こ" },
         { word: "小学生", meaning: "elementary school student", reading: "しょうがくせい", kanjiReading: "しょう" }
     ]
@@ -235,7 +235,7 @@ const KANJI_BANK = [
     id: "30", kanji: "田", meaning: "rice field, rice paddy",
     vocab: [
         { word: "田", meaning: "rice paddy", reading: "た", kanjiReading: "た" },
-        { word: "田舎", meaning: "countryside", reading: "いなか", kanjiReading: "いなか", example: { ja: "田舎育ちです。", en: "I grew up in the countryside." }},
+        { word: "田舎", meaning: "countryside", reading: "いなか", kanjiReading: "いなか", example: { ja: "田舎育ちです。", en: "I grew up in the countryside." } },
         { word: "油田", meaning: "oil field", reading: "ゆでん", kanjiReading: "でん" }
     ]
 },
@@ -250,9 +250,9 @@ const KANJI_BANK = [
 {
     id: "32", kanji: "生", meaning: "life, genuine, birth",
     vocab: [
-        { word: "人生", meaning: "one's life", reading: "じんせい", kanjiReading: "せい" },
-        { word: "生まれる", meaning: "to be born", reading: "うまれる", kanjiReading: "う" },
-        { word: "一年生", meaning: "first year student", reading: "いちねんせい", kanjiReading: "せい" }
+        { word: "人生", meaning: "one's life", reading: "じんせい", kanjiReading: "せい", example: { ja: "人生に疲れた。", en: "I'm tired of life." } },
+        { word: "生まれる", meaning: "to be born", reading: "うまれる", kanjiReading: "う", example: { ja: "そこで生まれたの？", en: "Were you born there?" } },
+        { word: "一年生", meaning: "first year student", reading: "いちねんせい", kanjiReading: "せい", example: { ja: "一年生です。", en: "I'm a freshman." } }
     ]
 },
 {
@@ -1107,7 +1107,7 @@ const KANJI_BANK = [
     vocab: [
         { word: "遠い", meaning: "far", reading: "とおい", kanjiReading: "とお" },
         { word: "遠足", meaning: "excursion", reading: "えんそく", kanjiReading: "えん" },
-        { word: "遠視", meaning: "farsightedness", reading: "えんし", kanjiReading: "えん" }
+        { word: "遠視", meaning: "farsightedness", reading: "えんし", kanjiReading: "えん", example: { ja: "年齢を重ねるにつれ、だんだん遠視になってきている。", en: "I'm getting farsighted as I get older." } }
     ]
 },
 {
