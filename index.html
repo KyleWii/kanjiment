@@ -224,6 +224,19 @@
       line-height: 1.4;
     }
 
+    .example {
+      margin-top: 10px;
+      text-align: left;
+      background: var(--panel-2);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 8px 12px;
+      color: var(--text);
+    }
+    .example summary { cursor: pointer; color: var(--muted); }
+    .example-ja { font-size: 1.3rem; margin-top: 8px; }
+    .example-ja b { color: var(--accent); }
+
     @media (max-width: 800px) {
       .grid { grid-template-columns: 1fr; }
       header { align-items: flex-start; gap: 12px; flex-direction: column; }
@@ -636,6 +649,17 @@
       return safeFull.slice(0, index) + "<b>" + kanjiReading + "</b>" + safeFull.slice(index + kanjiReading.length);
     }
 
+    function exampleHtml(vocab) {
+      if (!vocab.example) return "";
+      const ja = vocab.example.ja.replace(vocab.word, `<b>${vocab.word}</b>`);
+      return `
+        <details class="example">
+          <summary>Preview example sentence</summary>
+          <div class="example-ja">${ja}</div>
+          <div class="small">${vocab.example.en}</div>
+        </details>`;
+    }
+
     function answerReading(item, typed) {
       const data = getData(item.id);
       const vocab = getCurrentVocab(item);
@@ -655,6 +679,8 @@
         item.correctTotal++;
         message.className = "message good";
         message.innerHTML = `Correct. ${vocab.word} means "${vocab.meaning}". Reading: ${boldKanjiReading(vocab.reading, vocab.kanjiReading)}.`;
+        <!-- example sentence -->
+        message.insertAdjacentHTML("beforeend", exampleHtml(vocab));
         item.vocabIndex = ((item.vocabIndex || 0) + 1) % data.vocab.length;
         advanceItem(item);
         saveState();
