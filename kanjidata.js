@@ -3,8 +3,8 @@ const KANJI_BANK = [
     id: "1", kanji: "一", meaning: "one",
     vocab: [
         { word: "一", meaning: "one", reading: "いち", kanjiReading: "いち", example: { ja: "一，二，三！", en: "One, two, three!" }},
-        { word: "一人", meaning: "alone", reading: "ひとり", kanjiReading: "ひと" },
-        { word: "一つ", meaning: "one thing", reading: "ひとつ", kanjiReading: "ひと" }
+        { word: "一人", meaning: "alone", reading: "ひとり", kanjiReading: "ひと", example: { ja: "一人で行け！", en: "Go there by yourself!" }},
+        { word: "一つ", meaning: "one thing", reading: "ひとつ", kanjiReading: "ひと", example: { ja: "一つは青。", en: "One is blue." }}
     ]
 },
 {
@@ -235,7 +235,7 @@ const KANJI_BANK = [
     id: "30", kanji: "田", meaning: "rice field, rice paddy",
     vocab: [
         { word: "田", meaning: "rice paddy", reading: "た", kanjiReading: "た" },
-        { word: "田舎", meaning: "countryside", reading: "いなか", kanjiReading: "いなか" },
+        { word: "田舎", meaning: "countryside", reading: "いなか", kanjiReading: "いなか", example: { ja: "田舎育ちです。", en: "I grew up in the countryside." }},
         { word: "油田", meaning: "oil field", reading: "ゆでん", kanjiReading: "でん" }
     ]
 },
