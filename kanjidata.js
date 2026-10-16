@@ -2,7 +2,7 @@ const KANJI_BANK = [
 {
     id: "1", kanji: "一", meaning: "one",
     vocab: [
-        { word: "一", meaning: "one", reading: "いち", kanjiReading: "いち" },
+        { word: "一", meaning: "one", reading: "いち", kanjiReading: "いち", example: { ja: "一，二，三！", en: "One, two, three!" }},
         { word: "一人", meaning: "alone", reading: "ひとり", kanjiReading: "ひと" },
         { word: "一つ", meaning: "one thing", reading: "ひとつ", kanjiReading: "ひと" }
     ]
