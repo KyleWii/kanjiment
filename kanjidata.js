@@ -2,25 +2,25 @@ const KANJI_BANK = [
 {
     id: "1", kanji: "一", meaning: "one",
     vocab: [
-        { word: "一", meaning: "one", reading: "いち", kanjiReading: "いち", example: { ja: "一，二，三！", en: "One, two, three!" }},
-        { word: "一人", meaning: "alone", reading: "ひとり", kanjiReading: "ひと", example: { ja: "一人で行け！", en: "Go there by yourself!" }},
-        { word: "一つ", meaning: "one thing", reading: "ひとつ", kanjiReading: "ひと", example: { ja: "一つは青。", en: "One is blue." }}
+        { word: "一", meaning: "one", reading: "いち", kanjiReading: "いち", example: { ja: "一，二，三！", en: "One, two, three!" } },
+        { word: "一人", meaning: "alone", reading: "ひとり", kanjiReading: "ひと", example: { ja: "一人で行け！", en: "Go there by yourself!" } },
+        { word: "一つ", meaning: "one thing", reading: "ひとつ", kanjiReading: "ひと", example: { ja: "一つは青。", en: "One is blue." } }
     ]
 },
 {
     id: "2", kanji: "二", meaning: "two",
     vocab: [
-        { word: "二", meaning: "two", reading: "に", kanjiReading: "に" },
-        { word: "二人", meaning: "two people", reading: "ふたり", kanjiReading: "ふた" },
-        { word: "二つ", meaning: "two things", reading: "ふたつ", kanjiReading: "ふた" }
+        { word: "二", meaning: "two", reading: "に", kanjiReading: "に", example: { ja: "一石二鳥", en: "I killed two birds with one stone." } },
+        { word: "二人", meaning: "two people", reading: "ふたり", kanjiReading: "ふた", example: { ja: "二人は友達なの？", en: "Are you two friends?" } },
+        { word: "二つ", meaning: "two things", reading: "ふたつ", kanjiReading: "ふた", example: { ja: "二つだけだったよ。", en: "There were only two." } }
     ]
 },
 {
     id: "3", kanji: "三", meaning: "three",
     vocab: [
-        { word: "三", meaning: "three", reading: "さん", kanjiReading: "さん" },
-        { word: "三人", meaning: "three people", reading: "さんにん", kanjiReading: "さん" },
-        { word: "三つ", meaning: "three things", reading: "みっつ", kanjiReading: "みっ" }
+        { word: "三", meaning: "three", reading: "さん", kanjiReading: "さん", example: { ja: "うちの三男です。", en: "He's our third son." } },
+        { word: "三人", meaning: "three people", reading: "さんにん", kanjiReading: "さん", example: { ja: "妹が三人いる。", en: "I have three younger sisters." } },
+        { word: "三つ", meaning: "three things", reading: "みっつ", kanjiReading: "みっ", example: { ja: "これを三つください。", en: "I'd like three of these." } }
     ]
 },
 {
