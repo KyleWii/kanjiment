@@ -1509,5 +1509,37 @@ const KANJI_BANK = [
         { word: "心理", meaning: "mental state", reading: "しんり", kanjiReading: "り" },
         { word: "理由", meaning: "reason", reading: "りゆう", kanjiReading: "り" }
     ]
+},
+{
+    id: "190", kanji: "算", meaning: "calculate, divining, number",
+    vocab: [
+        { word: "足し算", meaning: "addition", reading: "たしざん", kanjiReading: "ざん" },
+        { word: "算数", meaning: "arithmetic", reading: "さんすう", kanjiReading: "さん" },
+        { word: "引き算", meaning: "subtraction", reading: "ひきざん", kanjiReading: "ざん" }
+    ]
+},
+{
+    id: "191", kanji: "作", meaning: "make, production, prepare",
+    vocab: [
+        { word: "作文", meaning: "composition", reading: "さくぶん", kanjiReading: "さく" },
+        { word: "工作", meaning: "handicraft", reading: "こうさく", kanjiReading: "さく" },
+        { word: "大作", meaning: "major work", reading: "たいさく", kanjiReading: "さく" }
+    ]
+},
+{
+    id: "192", kanji: "元", meaning: "beginning, former time, origin",
+    vocab: [
+        { word: "元気", meaning: "energy", reading: "げんき", kanjiReading: "げん" },
+        { word: "元々", meaning: "originally", reading: "もともと", kanjiReading: "もと" },
+        { word: "還元", meaning: "restoration", reading: "かんげん", kanjiReading: "げん" }
+    ]
+},
+{
+    id: "193", kanji: "食", meaning: "eat, food",
+    vocab: [
+        { word: "食べる", meaning: "to eat", reading: "たべる", kanjiReading: "た" },
+        { word: "試食", meaning: "food sample", reading: "ししょく", kanjiReading: "しょく" },
+        { word: "和食", meaning: "Japanese style food", reading: "わしょく", kanjiReading: "しょく" }
+    ]
 }
 ];
